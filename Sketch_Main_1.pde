@@ -9,7 +9,7 @@ void setup() {
   
   //size( 1920, 1080 );
   fullScreen();
-  vid = new Movie(this,"SWIPE.MOV"); 
+  vid = new Movie(this,"IMG_1814.MP4"); 
  frameRate(60);
   
   vid.play();
@@ -51,7 +51,7 @@ vid.speed(.03);
   vid.updatePixels();
  filter(BLUR, 4);
  
- saveFrame("ShakeBake-######.tif");
+ saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\ShakeBake-######.tif");
   
 }
 void movieEvent(Movie m) {
