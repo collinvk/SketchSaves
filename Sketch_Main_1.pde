@@ -38,7 +38,7 @@ vid.speed(.03);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,200);
+    color pixel = color(r,g,b,180);
 
     noStroke();
     fill( pixel );
@@ -55,7 +55,7 @@ vid.speed(.03);
     int yA = int(random(height));
     
    noStroke();
-   fill(250);
+   fill(1);
    ellipse(xA,yA,random(10,2),random(3,15));
     
   
@@ -64,7 +64,7 @@ vid.speed(.03);
   vid.updatePixels();
  filter(BLUR, 4);
  
- saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\Graf2-######.tif");
+ saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\Graf3-######.tif");
   
 }
 void movieEvent(Movie m) {
