@@ -20,7 +20,7 @@ void setup() {
 
 void draw() {
   
-vid.speed(.03);
+vid.speed(.02);
 
   
   vid.loadPixels();
