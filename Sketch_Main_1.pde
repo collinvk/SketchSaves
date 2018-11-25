@@ -9,7 +9,7 @@ void setup() {
   
   //size( 1920, 1080 );
   fullScreen();
-  vid = new Movie(this,"Plant.MP4"); 
+  vid = new Movie(this,"IMG_1953.MP4"); 
  frameRate(1);
   
   vid.play();
@@ -38,7 +38,7 @@ vid.speed(.03);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,50);
+    color pixel = color(r,g,b,70);
 
     noStroke();
     fill( pixel );
@@ -64,7 +64,7 @@ vid.speed(.03);
   vid.updatePixels();
  filter(BLUR, 4);
  
- saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\ShakeBake-######.tif");
+ saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\Graf-######.tif");
   
 }
 void movieEvent(Movie m) {
