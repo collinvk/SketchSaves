@@ -20,7 +20,7 @@ void setup() {
 
 void draw() {
   
-vid.speed(.05);
+vid.speed(.02);
 
   
   vid.loadPixels();
@@ -29,7 +29,7 @@ vid.speed(.05);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<70000; ++i) {
+  for (int i=0; i<140000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -38,7 +38,7 @@ vid.speed(.05);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,100);
+    color pixel = color(r,g,b,110);
 
     noStroke();
     fill( pixel );
@@ -52,7 +52,7 @@ vid.speed(.05);
 
     
   vid.updatePixels();
- filter(BLUR,3);
+ filter(BLUR,4);
  
  saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\clock-######.tif");
   
