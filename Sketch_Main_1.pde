@@ -10,7 +10,7 @@ void setup() {
   //size( 1920, 1080 );
   fullScreen();
   vid = new Movie(this,"Collage Flowers Wall.MP4"); 
- frameRate(1);
+ frameRate(24);
   
   vid.play();
   vid.volume(0);
@@ -20,17 +20,17 @@ void setup() {
 
 void draw() {
   
-vid.speed(.02);
+vid.speed(1);
 
 background(250);
   
   vid.loadPixels();
  
-background(250);
+background(500);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<300000; ++i) {
+  for (int i=0; i<20000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -45,7 +45,7 @@ background(250);
     fill( pixel );
     float mapx = map(x,0,vid.width,0,width);
     float mapy = map(y,0,vid.height,0,height);
-    ellipse ( mapx, mapy, random(2, 10), random(4, 2) );
+    ellipse ( mapx, mapy, random(50, 50), random(50, 50) );
     
     
   }
@@ -55,8 +55,8 @@ background(250);
   vid.updatePixels();
  filter(BLUR,3);
  
- saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\WallFlowerCollage-######.tif");
-  
+ saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\WallFlowerCollageTEST-######.tif");
+  vid.noLoop();
 }
 void movieEvent(Movie m) {
   m.read();
