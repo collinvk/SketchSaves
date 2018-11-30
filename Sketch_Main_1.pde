@@ -45,6 +45,7 @@ background(500);
     fill( pixel );
     float mapx = map(x,0,vid.width,0,width);
     float mapy = map(y,0,vid.height,0,height);
+    
     ellipse ( mapx, mapy, random(50, 50), random(50, 50) );
     
     
@@ -54,8 +55,8 @@ background(500);
     
   vid.updatePixels();
  filter(BLUR,3);
- String hash = "d41b5a5";
- String fileName = hash + "-WallFlowerTest";
+ String hash = "aca3d67";
+ String fileName = hash + "-WallFlowerTest\\";
  saveFrame("Exports\\" + fileName + "-######.tif");
   vid.noLoop();
 }
