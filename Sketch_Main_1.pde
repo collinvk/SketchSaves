@@ -54,8 +54,9 @@ background(500);
     
   vid.updatePixels();
  filter(BLUR,3);
- 
- saveFrame("J:\\PCA\\Code\\Processing\\Sketch_Main_1\\Sketch_Main_1\\Exports\\WallFlowerCollageTEST-######.tif");
+ String hash = "d41b5a5";
+ String fileName = hash + "-WallFlowerTest";
+ saveFrame("Exports\\" + fileName + "-######.tif");
   vid.noLoop();
 }
 void movieEvent(Movie m) {
