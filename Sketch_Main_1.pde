@@ -73,7 +73,7 @@ background(250);
  
 
  String fileName = hash + "-DishesWithSquares\\";
- saveFrame("Exports\\" + fileName + "-######.tif" + movieName);
+ saveFrame("Exports\\" + fileName + movieName + "-######.tif" );
   vid.noLoop();
 }
 void movieEvent(Movie m) {
