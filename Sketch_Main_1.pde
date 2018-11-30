@@ -31,7 +31,7 @@ background(250);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<150000; ++i) {
+  for (int i=0; i<100000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -40,17 +40,29 @@ background(250);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,250);
+    color pixel = color(r,g,b,70);
 
     noStroke();
     fill( pixel );
     float mapx = map(x,0,vid.width,0,width);
     float mapy = map(y,0,vid.height,0,height);
     
-    ellipse ( mapx, mapy, random(50, 50), random(50, 50) );
-    rect (mapx,mapy, random(50,50),random(50,50));
+    ellipse ( mapx, mapy, random(15, 2), random(2, 15) );
+    rect (mapx,mapy, random(20,5),random(5,20));
     
     
+  }
+  
+  for (int i= 0; i<20000;++i){
+    
+    int xA = int(random(width));
+    int yA = int(random(height));
+    
+   noStroke();
+   fill(250);
+   rect(xA,yA,random(1,3),random(10,20));
+    
+  
   }
   
 
