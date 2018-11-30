@@ -9,7 +9,7 @@ void setup() {
   
   //size( 1920, 1080 );
   fullScreen();
-  vid = new Movie(this,"Collage Flowers Wall.MP4"); 
+  vid = new Movie(this,"IMG_1935.MP4"); 
  frameRate(24);
   
   vid.play();
