@@ -40,7 +40,7 @@ background(250);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,70);
+    color pixel = color(r,g,b,250); 
 
     noStroke();
     fill( pixel );
@@ -48,7 +48,7 @@ background(250);
     float mapy = map(y,0,vid.height,0,height);
     
     ellipse ( mapx, mapy, random(15, 2), random(2, 15) );
-    rect (mapx,mapy, random(20,5),random(5,20));
+    //rect (mapx,mapy, random(20,5),random(5,20));
     
     
   }
@@ -59,7 +59,7 @@ background(250);
     int yA = int(random(height));
     
    noStroke();
-   fill(250);
+   fill(1);
    rect(xA,yA,random(1,3),random(10,20));
     
   
@@ -69,11 +69,12 @@ background(250);
     
   vid.updatePixels();
  filter(BLUR,3);
- String hash = "794dd60";
+ String hash = "-794dd60-";
+ String fileName = "-DisheswithNoRectButNoise-" 
  
 
- String fileName = hash + "-DishesWithSquares\\";
- saveFrame("Exports\\" + fileName + movieName + "-######.tif" );
+ String folderName = hash + "-fileName\\";
+ saveFrame("Exports\\" + folderName + fileName+movieName + "-######.tif" );
   vid.noLoop();
 }
 void movieEvent(Movie m) {
