@@ -72,10 +72,10 @@ background(250);
   vid.updatePixels();
  filter(BLUR,3);
  String hash = "-" + commitName + " -";
- String fileName = "-TestsForRepository9-" ;
+ String fileName = "-TestsForRepository9-";
  
 
- String folderName = hash + "-fileName\\";
+ String folderName = hash + "fileName\\";
  saveFrame("Exports\\" + folderName + fileName+movieName + "-######.tif" );
   vid.noLoop();
 }
