@@ -18,6 +18,7 @@ void setup() {
 
   String[] lines = loadStrings("../COMMIT_NAME");
   commitName = lines[lines.length - 1];
+  rectMode(CENTER);
  
 }
 
@@ -33,7 +34,7 @@ background(250);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<2000; ++i) {
+  for (int i=0; i<40000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -50,10 +51,11 @@ background(250);
     float mapy = map(y,0,vid.height,0,height);
   
     pushMatrix();
-  translate(width/2,height/2);
+  
+  translate(mapx, mapy);
   rotate(frameCount*radians(90) / 20);
-  translate(0, -60);
-    rect (mapx,mapy, random(20,5),random(5,20));
+  
+    rect (0,0, random(2,20),random(2,20));
     popMatrix();
     
     
@@ -80,7 +82,7 @@ background(250);
  
 
  String folderName = fileName + hash;
- saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
+ //saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
   vid.noLoop();
 }
 void movieEvent(Movie m) {
