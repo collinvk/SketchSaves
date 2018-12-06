@@ -72,7 +72,7 @@ background(250);
   vid.updatePixels();
  filter(BLUR,3);
  String hash = "-" + commitName + " -";
- String fileName = "-12/6 Final Workflow-";
+ String fileName = "Final Workflow-";
  
 
  String folderName = fileName + hash;
