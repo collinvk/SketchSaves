@@ -17,7 +17,7 @@ void setup() {
   vid.volume(0);
 
   String[] lines = loadStrings("../COMMIT_NAME");
-  commitName = lines[3];
+  commitName = lines[lines.length - 1];
  
 }
 
@@ -75,7 +75,7 @@ background(250);
  String fileName = "-TestsForRepository10-";
  
 
- String folderName = hash + fileName\\;
+ String folderName = hash + "fileName\\";
  saveFrame("Exports\\" + folderName + fileName+movieName + "-######.tif" );
   vid.noLoop();
 }
