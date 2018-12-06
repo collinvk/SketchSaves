@@ -50,7 +50,7 @@ background(250);
     float mapy = map(y,0,vid.height,0,height);
   
     
-    //rect (mapx,mapy, random(20,5),random(5,20));
+    rect (mapx,mapy, random(20,5),random(5,20));
     
     
   }
@@ -72,10 +72,10 @@ background(250);
   vid.updatePixels();
  filter(BLUR,3);
  String hash = "-" + commitName + " -";
- String fileName = "-TestsForRepository12-";
+ String fileName = "-12/6 Final Workflow-";
  
 
- String folderName = hash + fileName;
+ String folderName = fileName + hash;
  saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
   vid.noLoop();
 }
