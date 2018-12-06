@@ -82,7 +82,7 @@ background(250);
  
 
  String folderName = fileName + hash;
- //saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
+saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
   vid.noLoop();
 }
 void movieEvent(Movie m) {
