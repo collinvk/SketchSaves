@@ -2,6 +2,7 @@ import processing.video.*;
 Movie vid;
 String movieName = "IMG_1935";
 String movieFormat = ".MP4";
+String commitName;
 
 PImage canvas;
 
@@ -15,8 +16,8 @@ void setup() {
   vid.play();
   vid.volume(0);
 
-  //String[] lines = loadStrings(".git/ORIG_HEAD");
-  //print(lines);
+  String[] lines = loadStrings("../COMMIT_NAME");
+  commitName = lines[3];
  
 }
 
@@ -32,7 +33,7 @@ background(250);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<100000; ++i) {
+  for (int i=0; i<2000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -70,8 +71,8 @@ background(250);
     
   vid.updatePixels();
  filter(BLUR,3);
- String hash = "-794dd60-";
- String fileName = "-TestsForRepository6-" ;
+ String hash = "-" + commitName + " -";
+ String fileName = "-TestsForRepository7-" ;
  
 
  String folderName = hash + "-fileName\\";
