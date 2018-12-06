@@ -78,7 +78,7 @@ background(250);
   vid.updatePixels();
  filter(BLUR,3);
  String hash = "-" + commitName + " -";
- String fileName = "RotateWholeImageAroundCenter-";
+ String fileName = "RotateAroundCenter-";
  
 
  String folderName = fileName + hash;
