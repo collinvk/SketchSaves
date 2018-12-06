@@ -75,7 +75,7 @@ background(250);
  String fileName = "-TestsForRepository10-";
  
 
- String folderName = hash + "fileName\\";
+ String folderName = hash + fileName\\;
  saveFrame("Exports\\" + folderName + fileName+movieName + "-######.tif" );
   vid.noLoop();
 }
