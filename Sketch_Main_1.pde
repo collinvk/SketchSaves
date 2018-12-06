@@ -49,8 +49,12 @@ background(250);
     float mapx = map(x,0,vid.width,0,width);
     float mapy = map(y,0,vid.height,0,height);
   
-    
+    pushMatrix();
+  translate(width/2,height/2);
+  rotate(frameCount*radians(90) / 20);
+  translate(0, -60);
     rect (mapx,mapy, random(20,5),random(5,20));
+    popMatrix();
     
     
   }
@@ -72,7 +76,7 @@ background(250);
   vid.updatePixels();
  filter(BLUR,3);
  String hash = "-" + commitName + " -";
- String fileName = "Final Workflow-";
+ String fileName = "RotateWholeImageAroundCenter-";
  
 
  String folderName = fileName + hash;
