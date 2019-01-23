@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = "IMG_1935";
+String movieName = "Collin Kluchman and Jack English-Cooper Collaboration with Mark Cooper (1)";
 String movieFormat = ".MP4";
 String commitName;
 
@@ -26,7 +26,7 @@ void draw() {
   
 vid.speed(1);
 
-background(250);
+//background(250);
   
   vid.loadPixels();
  
