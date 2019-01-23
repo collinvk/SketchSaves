@@ -24,7 +24,7 @@ void setup() {
 
 void draw() {
   
-vid.speed(1);
+vid.speed(.1);
 
 //background(250);
   
@@ -34,7 +34,7 @@ vid.speed(1);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<40000; ++i) {
+  for (int i=0; i<500000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -43,32 +43,23 @@ vid.speed(1);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,250); 
+    color pixel = color(r,g,b,20); 
 
     noStroke();
     fill( pixel );
     float mapx = map(x,0,vid.width,0,width);
     float mapy = map(y,0,vid.height,0,height);
   
-    pushMatrix();
+   
   
-  translate(mapx, mapy);
-  rotate(frameCount*radians(90) / 20);
   
-    rect (0,0, random(2,20),random(2,20));
-    popMatrix();
-    
-    
-  }
   
-  for (int i= 0; i<20000;++i){
+   ellipse (mapx,mapy, random(2,5),random(0,7));
+   
     
-    int xA = int(random(width));
-    int yA = int(random(height));
-    
-   noStroke();
-   fill(1);
-   rect(xA,yA,random(1,3),random(10,20));
+ 
+  
+  
     
   
   }
@@ -76,9 +67,9 @@ vid.speed(1);
 
     
   vid.updatePixels();
- filter(BLUR,3);
+ filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "RotateAroundCenter-";
+ String fileName = "Creation and Collaboration 1-";
  
 
  String folderName = fileName + hash;
