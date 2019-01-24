@@ -11,7 +11,7 @@ void setup() {
   //size( 1920, 1080 );
   fullScreen();
   vid = new Movie(this, movieName + movieFormat); 
- frameRate(24);
+ frameRate(5);
   
   vid.play();
   vid.volume(0);
@@ -24,9 +24,9 @@ void setup() {
 
 void draw() {
   
-vid.speed(.1);
+vid.speed(.03);
 
-//background(250);
+background(250);
   
   vid.loadPixels();
  
@@ -34,7 +34,7 @@ vid.speed(.1);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<500000; ++i) {
+  for (int i=0; i<300000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -43,7 +43,7 @@ vid.speed(.1);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,20); 
+    color pixel = color(r,g,b,70); 
 
     noStroke();
     fill( pixel );
@@ -54,7 +54,7 @@ vid.speed(.1);
   
   
   
-   ellipse (mapx,mapy, random(2,5),random(0,7));
+   ellipse (mapx,mapy, random(2,10),random(0,15));
    
     
  
@@ -69,7 +69,7 @@ vid.speed(.1);
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "Creation and Collaboration 1-";
+ String fileName = "Creation and Collaboration 3 (pulse less)-";
  
 
  String folderName = fileName + hash;
