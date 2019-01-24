@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = "Collin Kluchman and Jack English-Cooper Collaboration with Mark Cooper (1)";
+String movieName = "Collin Kluchman and Jack English-Cooper Collaboration with Mark Cooper Pulse Less 2";
 String movieFormat = ".MP4";
 String commitName;
 
@@ -11,7 +11,7 @@ void setup() {
   //size( 1920, 1080 );
   fullScreen();
   vid = new Movie(this, movieName + movieFormat); 
- frameRate(5);
+ frameRate(1);
   
   vid.play();
   vid.volume(0);
@@ -34,7 +34,7 @@ background(250);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<300000; ++i) {
+  for (int i=0; i<250000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -54,7 +54,7 @@ background(250);
   
   
   
-   ellipse (mapx,mapy, random(2,10),random(0,15));
+   ellipse (mapx,mapy, random(2,15),random(0,20));
    
     
  
