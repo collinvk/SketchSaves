@@ -24,7 +24,7 @@ void setup() {
 
 void draw() {
   
-vid.speed(.03);
+vid.speed(.1);
 
 background(250);
   
@@ -34,7 +34,7 @@ background(250);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<225000; ++i) {
+  for (int i=0; i<500000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -43,7 +43,7 @@ background(250);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,70); 
+    color pixel = color(r,g,b,20); 
 
     noStroke();
     fill( pixel );
@@ -69,7 +69,7 @@ background(250);
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "Creation and Collaboration 3 (pulse less)-";
+ String fileName = "Bakery and Crabs 1 -";
  
 
  String folderName = fileName + hash;
