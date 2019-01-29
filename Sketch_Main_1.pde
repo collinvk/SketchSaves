@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = "Collin Kluchman and Jack English-Cooper Collaboration with Mark Cooper (1)";
+String movieName = "Crabs and Bakery 1-29-19";
 String movieFormat = ".MP4";
 String commitName;
 
@@ -11,7 +11,7 @@ void setup() {
   //size( 1920, 1080 );
   fullScreen();
   vid = new Movie(this, movieName + movieFormat); 
- frameRate(1);
+ frameRate(20);
   
   vid.play();
   vid.volume(0);
@@ -24,9 +24,9 @@ void setup() {
 
 void draw() {
   
-vid.speed(.1);
+vid.speed(.01);
 
-background(250);
+//background(250);
   
   vid.loadPixels();
  
@@ -34,7 +34,7 @@ background(250);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<500000; ++i) {
+  for (int i=0; i<1000000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -73,7 +73,7 @@ background(250);
  
 
  String folderName = fileName + hash;
-saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
+//saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
   vid.noLoop();
 }
 void movieEvent(Movie m) {
