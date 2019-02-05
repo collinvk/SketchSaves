@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = "Crabs and Bakery 1-29-19";
+String movieName = "C&C 2-5-19 1 (cut out the bad)";
 String movieFormat = ".MP4";
 String commitName;
 
@@ -11,7 +11,7 @@ void setup() {
   //size( 1920, 1080 );
   fullScreen();
   vid = new Movie(this, movieName + movieFormat); 
- frameRate(20);
+ frameRate(24);
   
   vid.play();
   vid.volume(0);
@@ -24,7 +24,7 @@ void setup() {
 
 void draw() {
   
-vid.speed(.01);
+vid.speed(.1);
 
 //background(250);
   
@@ -34,7 +34,7 @@ vid.speed(.01);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<1000000; ++i) {
+  for (int i=0; i<500000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -54,7 +54,7 @@ vid.speed(.01);
   
   
   
-   ellipse (mapx,mapy, random(2,15),random(0,20));
+   ellipse (mapx,mapy, random(2,5),random(0,7));
    
     
  
@@ -69,11 +69,11 @@ vid.speed(.01);
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "Bakery and Crabs 1 -";
+ String fileName = "Creation and Collaboration Cut Down Additive 2-5-119";
  
 
  String folderName = fileName + hash;
-//saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
+saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
   vid.noLoop();
 }
 void movieEvent(Movie m) {
