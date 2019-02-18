@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = ("Berries On Wall");
+String movieName = ("Grave Flowers");
 String movieFormat = ".MP4";
 String commitName;
 
