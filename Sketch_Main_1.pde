@@ -24,7 +24,7 @@ void setup() {
 
 void draw() {
   
-vid.speed(.1);
+vid.speed(.03);
 
 //background(250);
   
@@ -34,7 +34,7 @@ vid.speed(.1);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<500000; ++i) {
+  for (int i=0; i<1000000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -43,7 +43,7 @@ vid.speed(.1);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,60); 
+    color pixel = color(r,g,b,200); 
 
     noStroke();
     fill( pixel );
@@ -69,7 +69,7 @@ vid.speed(.1);
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "Creation and Collaboration Cut Down Additive 2-5-119";
+ String fileName = "GraveBirds";
  
 
  String folderName = fileName + hash;
