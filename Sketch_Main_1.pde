@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = "C&C 2-5-19 1 (cut out the bad)";
+String movieName = ("Berries On Wall");
 String movieFormat = ".MP4";
 String commitName;
 
@@ -43,7 +43,7 @@ vid.speed(.1);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,20); 
+    color pixel = color(r,g,b,60); 
 
     noStroke();
     fill( pixel );
