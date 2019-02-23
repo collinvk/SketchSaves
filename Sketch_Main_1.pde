@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = ("Grave Flowers");
+String movieName = ("Hella Plants_1");
 String movieFormat = ".MP4";
 String commitName;
 
@@ -34,7 +34,7 @@ vid.speed(.03);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<1000000; ++i) {
+  for (int i=0; i<500000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -54,7 +54,7 @@ vid.speed(.03);
   
   
   
-   ellipse (mapx,mapy, random(2,5),random(0,7));
+   ellipse (mapx,mapy, random(4,10),random(2,14));
    
     
  
@@ -69,7 +69,7 @@ vid.speed(.03);
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "GraveBirds";
+ String fileName = "LotsofPlants1";
  
 
  String folderName = fileName + hash;
