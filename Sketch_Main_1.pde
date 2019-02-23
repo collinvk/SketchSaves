@@ -34,7 +34,7 @@ vid.speed(.03);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<500000; ++i) {
+  for (int i=0; i<70000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -43,7 +43,7 @@ vid.speed(.03);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,200); 
+    color pixel = color(r,g,b,30); 
 
     noStroke();
     fill( pixel );
@@ -54,7 +54,7 @@ vid.speed(.03);
   
   
   
-   ellipse (mapx,mapy, random(4,10),random(2,14));
+   ellipse (mapx,mapy, random(6,15),random(5,20));
    
     
  
