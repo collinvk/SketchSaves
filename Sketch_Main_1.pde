@@ -34,7 +34,7 @@ vid.speed(.03);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<500000; ++i) {
+  for (int i=0; i<50000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -43,7 +43,7 @@ vid.speed(.03);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,200); 
+    color pixel = color(r,g,b,45); 
 
     noStroke();
     fill( pixel );
@@ -54,12 +54,18 @@ vid.speed(.03);
   
   
   
-   ellipse (mapx,mapy, random(4,10),random(2,14));
+   ellipse (mapx,mapy, random(7,13),random(4,20));
    
+  }
+  
+   for (int i= 0; i<10000;++i){
     
- 
-  
-  
+    int xA = int(random(width));
+    int yA = int(random(height));
+    
+   noStroke();
+   fill(250,40);
+   ellipse(xA,yA,random(15,4),random(15,9));
     
   
   }
@@ -69,7 +75,7 @@ vid.speed(.03);
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "LotsofPlants1";
+ String fileName = "LotsofPlants1wiht circles";
  
 
  String folderName = fileName + hash;
