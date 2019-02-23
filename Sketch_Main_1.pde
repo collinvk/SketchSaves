@@ -24,7 +24,7 @@ void setup() {
 
 void draw() {
   
-vid.speed(.03);
+vid.speed(.1);
 
 //background(250);
   
@@ -75,7 +75,7 @@ vid.speed(.03);
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "LotsofPlants1wiht circles";
+ String fileName = "LotsofPlants1wihtcirclesfaster";
  
 
  String folderName = fileName + hash;
