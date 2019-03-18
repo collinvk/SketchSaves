@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = ("Hella Plants_1");
+String movieName = ("1Plant3-18");
 String movieFormat = ".MP4";
 String commitName;
 
@@ -43,7 +43,7 @@ vid.speed(.03);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,30); 
+    color pixel = color(r,g,b,20); 
 
     noStroke();
     fill( pixel );
@@ -69,7 +69,7 @@ vid.speed(.03);
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "LotsofPlantsFull";
+ String fileName = "1plant-3-18-19";
  
 
  String folderName = fileName + hash;
