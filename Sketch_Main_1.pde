@@ -11,7 +11,7 @@ void setup() {
   //size( 1920, 1080 );
   fullScreen();
   vid = new Movie(this, movieName + movieFormat); 
- frameRate(1);
+ frameRate(24);
   
   vid.play();
   vid.volume(0);
@@ -24,9 +24,9 @@ void setup() {
 
 void draw() {
   
-vid.speed(.02);
+vid.speed(.1);
 
-//background(250);
+
   
   vid.loadPixels();
  
@@ -50,32 +50,23 @@ vid.speed(.02);
     float mapx = map(x,0,vid.width,0,width);
     float mapy = map(y,0,vid.height,0,height);
   
-   ellipse (mapx,mapy, random(30,20),random(30,20));
+   ellipse (mapx,mapy, random(10,20),random(20,10));
   }
     
- for (int i=0; i<10000; ++i) {
-  
-  int x = int(random(vid.width));
-    int y = int(random(vid.height));
-    
-     noStroke();
-    fill(250,20);
-    float mapx = map(x,0,vid.width,0,width);
-    float mapy = map(y,0,vid.height,0,height);
-     ellipse (mapx,mapy, random(6,15),random(5,20));
+
   
   
   
-  }
+ 
     
   vid.updatePixels();
- filter(BLUR,1);
+ filter(BLUR,3);
  String hash = "-" + commitName + " -";
  String fileName = "Plant Light Key 3-21-19";
  
 
  String folderName = fileName + hash;
-//saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
+saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
   vid.noLoop();
 }
 void movieEvent(Movie m) {
