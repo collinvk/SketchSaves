@@ -1,6 +1,7 @@
 import processing.video.*;
 Movie vid;
 String movieName = ("Plant Light Key 3-21-19");
+
 String movieFormat = ".MP4";
 String commitName;
 
@@ -24,9 +25,9 @@ void setup() {
 
 void draw() {
   
-vid.speed(.1);
+vid.speed(.03);
 
-
+//background(250);
   
   vid.loadPixels();
  
@@ -34,7 +35,7 @@ vid.speed(.1);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<200000; ++i) {
+  for (int i=0; i<50000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -43,26 +44,39 @@ vid.speed(.1);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,5); 
+    color pixel = color(r,g,b,45); 
 
     noStroke();
     fill( pixel );
     float mapx = map(x,0,vid.width,0,width);
     float mapy = map(y,0,vid.height,0,height);
   
-   ellipse (mapx,mapy, random(10,20),random(20,10));
+   
+  
+  
+  
+   ellipse (mapx,mapy, random(7,13),random(4,20));
+   
   }
+  
+   for (int i= 0; i<10000;++i){
     
+    int xA = int(random(width));
+    int yA = int(random(height));
+    
+   noStroke();
+   fill(250,40);
+   ellipse(xA,yA,random(15,4),random(15,9));
+    
+  
+  }
+  
 
-  
-  
-  
- 
     
   vid.updatePixels();
- filter(BLUR,3);
+ filter(BLUR,2);
  String hash = "-" + commitName + " -";
- String fileName = "Plant Light Key 3-21-19";
+ String fileName = "plants Light Key 2";
  
 
  String folderName = fileName + hash;
