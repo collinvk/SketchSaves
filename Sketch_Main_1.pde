@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = ("1Plant3-18");
+String movieName = ("Plant Light Key 3-21-19");
 String movieFormat = ".MP4";
 String commitName;
 
@@ -11,7 +11,7 @@ void setup() {
   //size( 1920, 1080 );
   fullScreen();
   vid = new Movie(this, movieName + movieFormat); 
- frameRate(24);
+ frameRate(1);
   
   vid.play();
   vid.volume(0);
@@ -24,7 +24,7 @@ void setup() {
 
 void draw() {
   
-vid.speed(.03);
+vid.speed(.02);
 
 //background(250);
   
@@ -34,7 +34,7 @@ vid.speed(.03);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<70000; ++i) {
+  for (int i=0; i<200000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -43,37 +43,39 @@ vid.speed(.03);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,20); 
+    color pixel = color(r,g,b,5); 
 
     noStroke();
     fill( pixel );
     float mapx = map(x,0,vid.width,0,width);
     float mapy = map(y,0,vid.height,0,height);
   
-   
-  
-  
-  
-   ellipse (mapx,mapy, random(6,15),random(5,20));
-   
+   ellipse (mapx,mapy, random(30,20),random(30,20));
+  }
     
- 
+ for (int i=0; i<10000; ++i) {
   
-  
+  int x = int(random(vid.width));
+    int y = int(random(vid.height));
     
+     noStroke();
+    fill(250,20);
+    float mapx = map(x,0,vid.width,0,width);
+    float mapy = map(y,0,vid.height,0,height);
+     ellipse (mapx,mapy, random(6,15),random(5,20));
+  
+  
   
   }
-  
-
     
   vid.updatePixels();
  filter(BLUR,1);
  String hash = "-" + commitName + " -";
- String fileName = "1plant-3-18-19";
+ String fileName = "Plant Light Key 3-21-19";
  
 
  String folderName = fileName + hash;
-saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
+//saveFrame("Exports\\" + folderName + "\\" + fileName + movieName + "-######.tif" );
   vid.noLoop();
 }
 void movieEvent(Movie m) {
