@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie vid;
-String movieName = ("Plant Light Key 3-21-19");
+String movieName = ("V_20190322_134227_vHDR_Auto");
 
 String movieFormat = ".MP4";
 String commitName;
@@ -35,7 +35,7 @@ vid.speed(.03);
    
    if (vid.pixels.length <= 0) { return; }
  
-  for (int i=0; i<50000; ++i) {
+  for (int i=0; i<100000; ++i) {
 
     int x = int(random(vid.width));
     int y = int(random(vid.height));
@@ -44,7 +44,7 @@ vid.speed(.03);
     float r = red(vid.pixels[iPix]);
     float g = green(vid.pixels[iPix]);
     float b = blue(vid.pixels[iPix]);
-    color pixel = color(r,g,b,45); 
+    color pixel = color(r,g,b,20); 
 
     noStroke();
     fill( pixel );
@@ -59,17 +59,7 @@ vid.speed(.03);
    
   }
   
-   for (int i= 0; i<10000;++i){
-    
-    int xA = int(random(width));
-    int yA = int(random(height));
-    
-   noStroke();
-   fill(250,40);
-   ellipse(xA,yA,random(15,4),random(15,9));
-    
-  
-  }
+ 
   
 
     
